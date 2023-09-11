@@ -14,7 +14,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
   background-color: #5e60ce;
   border: none;
-  opacity: 0.4;l
+  opacity: 0.4;
 }
 
 .task {
