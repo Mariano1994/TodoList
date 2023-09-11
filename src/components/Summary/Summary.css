@@ -1,0 +1,35 @@
+.tasks-summary {
+  display: flex;
+  align-items: center
+  justify-content: space-between;
+  width: 73.6rem;
+  gap: 43rem;
+  margin-top: 6.5rem;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.tasks > span {
+color: var(--Blue, #4EA8DE);
+font-size: 1.4rem;
+font-weight: 700;
+line-height: normal;
+}
+
+.sumary {
+  display: flex;
+  padding: 2px 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--Gray-400, #333);
+
+}
+
+.tasks > .finished {
+  color: var(--Purple, #8284FA);
+}
