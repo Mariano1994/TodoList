@@ -1,0 +1,24 @@
+.no-task__message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem; 
+  margin-top: 8rem
+}
+
+.no-task__message img {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+  color: var(--Gray-300, #808080);
+  line-height: 140%;
+}
+

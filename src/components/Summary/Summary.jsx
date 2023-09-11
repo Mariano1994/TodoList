@@ -6,16 +6,16 @@ export function Summary() {
     <>
       <div className="tasks-summary">
           <div className="tasks">
-            <span> Tarefas criadas</span>
+            <strong> Tarefas criadas</strong>
             <div className="sumary">
-              <span>0</span>
+              <strong>5</strong>
             </div>
           </div>
 
           <div className="tasks">
-            <span className="finished"> Tarefas concluidas</span>
+            <strong className="finished"> Tarefas concluidas</strong>
             <div className="sumary">
-              <span>0</span>
+              <strong>2 de 5</strong>
             </div>
           </div>
         </div>

@@ -1,9 +1,8 @@
 .tasks-summary {
   display: flex;
-  align-items: center
+  align-items: center;
   justify-content: space-between;
   width: 73.6rem;
-  gap: 43rem;
   margin-top: 6.5rem;
 }
 
@@ -13,7 +12,7 @@
   gap: .8rem;
 }
 
-.tasks > span {
+.tasks > strong {
 color: var(--Blue, #4EA8DE);
 font-size: 1.4rem;
 font-weight: 700;
@@ -23,6 +22,7 @@ line-height: normal;
 .sumary {
   display: flex;
   padding: 2px 8px;
+  font-size: 1.4rem;
   justify-content: center;
   align-items: center;
   border-radius: 999px;
