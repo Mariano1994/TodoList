@@ -1,0 +1,25 @@
+
+body {
+  font-size: 1.6rem;
+  background: var(--Gray-600, #1A1A1A);
+  color: #fff;
+  font-family: "inter", sans-serif;
+}
+
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20rem;
+  flex-shrink: 0;
+  background: black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
