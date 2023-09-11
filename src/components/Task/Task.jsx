@@ -1,19 +1,23 @@
-import trash from "../../assets/trash.svg"
+import trash from "../../assets/trash.svg";
 
-import './Task.css'
+import "./Task.css";
 
-
-export function Task({task}) {
+export function Task({ task, onDeleteTask, onUPDateTaskStatus }) {
   return (
     <>
-      <li className='task'>
+      <li className="task">
         {" "}
-        <input type="checkbox" />
-        <span className={task.completed? 'checked': ''}>
+        <input type="checkbox" onClick={() => onUPDateTaskStatus(task.id)} />
+        <span className={task.completed ? "checked" : ""}>
           {task.content}
-        </span>
-        {" "}
-        <div><img src={trash} className='trashButton'/></div>
+        </span>{" "}
+        <div>
+          <img
+            src={trash}
+            className="trashButton"
+            onClick={() => onDeleteTask(task.id)}
+          />
+        </div>
       </li>
     </>
   );

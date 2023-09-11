@@ -7,63 +7,41 @@ import { EmptytaskMessage } from "./components/EmptyTaskMessage/EmptyTaskMessage
 import { TasksList } from "./components/TasksList/TasksList";
 import { useState } from "react";
 
-const tasksList = [
-  {
-    id: 1,
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
-    completed: true,
-  },
-
-  {
-    id: 2,
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
-    completed: true,
-  },
-
-  {
-    id: 3,
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
-    completed: true,
-  },
-
-  {
-    id: 4,
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
-    completed: false,
-  },
-
-  {
-    id: 5,
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
-    completed: false,
-  },
-
-];
 
 function App() {
-  const [tasks, setTasks] =useState(tasksList)
-
+  const [tasks, setTasks] = useState([]);
 
   function handleAddNewTask(newTask) {
-    setTasks((tasks) => [...tasks, newTask]) 
+    setTasks((tasks) => [...tasks, newTask]);
+  }
+
+  function handleDeleteTask(id) {
+    setTasks(tasks.filter((task) => task.id !== id));
+  }
+
+  function handleUPDateTaskStatus(id) {
+    setTasks((tasks) =>
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed} : task
+      )
+    );
   }
 
   return (
     <>
       <Header />
-      <NewTask  onAddNewTask={handleAddNewTask}/>
+      <NewTask onAddNewTask={handleAddNewTask} />
 
       <main className="content-wrapper">
         <Summary tasks={tasks} />
 
         <Divider />
 
-      {tasks.length > 0 ? <TasksList tasksData={tasks}/> : <EmptytaskMessage/> }
+        {tasks.length > 0 ? (
+          <TasksList tasksData={tasks} onDeleteTask={handleDeleteTask} onUPDateTaskStatus={handleUPDateTaskStatus} />
+        ) : (
+          <EmptytaskMessage />
+        )}
       </main>
     </>
   );

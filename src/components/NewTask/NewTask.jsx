@@ -1,22 +1,21 @@
 import { useState } from "react";
 import "./Newtask.css";
 
-export function NewTask({onAddNewTask}) {
+export function NewTask({ onAddNewTask }) {
   const [newTask, setNewTask] = useState("");
 
   function handleAddNewTask(event) {
-    event.preventDefault()
+    event.preventDefault();
 
     const NewTasks = {
-       id: Math.random().toString(),
-       content: newTask,
-       completed: false, 
-    }
+      id: Math.random().toString(),
+      content: newTask,
+      completed: false,
+    };
 
-    onAddNewTask(NewTasks)
+    onAddNewTask(NewTasks);
 
-    setNewTask("")
-
+    setNewTask("");
   }
 
   return (
@@ -24,6 +23,7 @@ export function NewTask({onAddNewTask}) {
       <div className="input-task" onSubmit={handleAddNewTask}>
         <form>
           <input
+            required
             type="text"
             placeholder="Adicione nova tarefa"
             value={newTask}
