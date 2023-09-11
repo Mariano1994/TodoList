@@ -1,0 +1,53 @@
+input[type="checkbox"] {
+  border: 1px solid #4ea8de;
+  border-radius: 50%;
+  appearance: none;
+
+  width: 1.7rem;
+  height: 1.7rem;
+  flex-shrink: 0;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #5e60ce;
+  border: none;
+  opacity: 0.4;l
+}
+
+.task {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
+  gap: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--Gray-400, #333);
+  background: var(--Gray-500, #262626);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+  width: 736px;
+}
+
+.task span {
+  display: flex;
+  color: var(--Gray-100, #f2f2f2);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  flex: 1
+}
+
+.trashButton {
+  background: transparent;
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.4;
+}

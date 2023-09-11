@@ -4,10 +4,51 @@ import { NewTask } from "./components/NewTask/NewTask";
 import { Summary } from "./components/Summary/Summary";
 import { Divider } from "./components/Divider/Divider";
 import { EmptytaskMessage } from "./components/EmptyTaskMessage/EmptyTaskMessage";
+import { TasksList } from "./components/TasksList/TasksList";
+import { useState } from "react";
 
+const tasksList = [
+  {
+    id: 1,
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
+    completed: true,
+  },
 
+  {
+    id: 2,
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
+    completed: true,
+  },
+
+  {
+    id: 3,
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
+    completed: true,
+  },
+
+  {
+    id: 4,
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
+    completed: false,
+  },
+
+  {
+    id: 5,
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mngjbu gbugubr gubbgurbk ljgjrbgb",
+    completed: false,
+  },
+
+];
 
 function App() {
+
+  const [tasks, setTasks] =useState(tasksList)
+
   return (
     <>
       <Header />
@@ -17,9 +58,8 @@ function App() {
         <Summary />
 
         <Divider />
-        
-        <EmptytaskMessage/>
 
+      {tasks.length > 0 ? <TasksList tasksData={tasks}/> : <EmptytaskMessage/> }
       </main>
     </>
   );
