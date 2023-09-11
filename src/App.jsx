@@ -46,16 +46,20 @@ const tasksList = [
 ];
 
 function App() {
-
   const [tasks, setTasks] =useState(tasksList)
+
+
+  function handleAddNewTask(newTask) {
+    setTasks((tasks) => [...tasks, newTask]) 
+  }
 
   return (
     <>
       <Header />
-      <NewTask />
+      <NewTask  onAddNewTask={handleAddNewTask}/>
 
       <main className="content-wrapper">
-        <Summary />
+        <Summary tasks={tasks} />
 
         <Divider />
 
