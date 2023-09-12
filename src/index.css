@@ -13,3 +13,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-size: 1.6rem;
+  background: var(--Gray-600, #1a1a1a);
+  color: #fff;
+  font-family: "inter", sans-serif;
+}
+
+.content-wrapper {
+  display: grid;
+  place-content: center;
+  
+}
+
